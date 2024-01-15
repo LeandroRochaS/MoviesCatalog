@@ -1,0 +1,76 @@
+.btn {
+  display: inline-block;
+  color: $white-light;
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
+}
+
+.btn-secondary {
+  display: inline-block;
+  color: $white-light;
+  padding: 8px 24px;
+  background: $black-light;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
+}
+
+.btn-banner {
+  display: inline-block;
+  color: $white-light;
+  padding: 10px 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
+  transition: 0.4s ease;
+
+  &:hover {
+    transform: scale(1.09);
+  }
+}
+
+.btn-list {
+  background: $black-light;
+}
+
+.btn-login {
+  padding: 12px 24px;
+}
+
+a {
+  text-decoration: none;
+
+  @include typeface-2(p3, desktop);
+  color: $white-light;
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+input {
+  accent-color: $primary-color;
+}
+
+select,
+option {
+  height: 48px;
+}
+
+input,
+select,
+option,
+textarea {
+  padding: 10px 12px;
+  background-color: $black-light;
+
+  border: 0;
+  border: 4px;
+  width: 100%;
+
+  color: $white-light;
+
+  @include typeface-2(p3, desktop);
+}
