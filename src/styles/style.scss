@@ -15,7 +15,7 @@
 
 body {
   width: 100%;
-  background: $black-dark;
+  background: $black-light;
   position: relative;
 
   &::-webkit-scrollbar {
@@ -41,6 +41,10 @@ body {
 svg,
 img {
   width: 100%;
+}
+
+iframe {
+  border: none; /* Remover borda padrão */
 }
 
 @import "./sass/menu";

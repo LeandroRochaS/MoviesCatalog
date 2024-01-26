@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 interface CarouselProps {
   data: MovieInfo[];
@@ -17,26 +18,50 @@ export default function Carousel(props: CarouselProps) {
     console.log("Componente Carousel montado.");
     console.log(data);
     // Qualquer código que você queira executar quando o componente for montado.
-  }, []);
+  }, [data]);
 
   const settings = {
-    className: "center",
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 5,
-    swipeToSlide: true,
-    afterChange: function (index) {
-      console.log(
-        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-      );
-    },
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 1,
+    responsive: [
+      {
+        breakpoint: 1200, // Adjusted breakpoint
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 1,
+
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768, // Adjusted breakpoint
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
 
   return (
     <>
       <Slider {...settings}>
-        {data.map((item) => (
-          <div className="card ml-1" key={item.id}>
+        {data.map((item, index) => (
+          <div className="card ml-1" key={index}>
             <div className="card-image">
               <img
                 src={`${baseURLImage}/w300/${item.poster_path}`}
@@ -46,7 +71,9 @@ export default function Carousel(props: CarouselProps) {
             </div>
             <div className="card-info">
               <div className="card-info-title">
-                <h6>{item.title}</h6>
+                <Link to={`/movie/${item.id}`}>
+                  <h6>{item.title}</h6>
+                </Link>
               </div>
               <div className="card-info-rating flex mt-1">
                 <div className="flex br-gray-3 mr-2 mb-1">

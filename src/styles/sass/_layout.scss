@@ -311,21 +311,41 @@ footer {
   border: 3px solid red;
 }
 
+.slick-slide {
+  min-height: 450px !important;
+}
+
 .card {
   border-radius: 4px;
-  background-color: rgba(15, 20, 31, 0.3);
+  background-color: rgba(15, 20, 20, 0.3);
   transition: 0.3s ease;
-  min-height: 250px;
+  height: 400px;
   max-width: 250px;
 
   &:hover {
     transform: scale(1.05);
   }
 }
+.card-2 {
+  border-radius: 4px;
+  background-color: rgba(15, 20, 20, 0.3);
+  transition: 0.3s ease;
+  height: 500px;
+  max-width: 250px;
 
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.container-search {
+  width: 100%;
+  margin: 0 auto;
+}
 .card-image {
   border-radius: 4px;
-  min-height: 265px;
+  min-height: 375px;
+  background-position: center;
+  background-size: cover;
 }
 
 .img-post {
@@ -364,17 +384,125 @@ hr {
     rgba(6, 9, 15, 0.7) 92%
   );
 }
+.cemVh {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.movie-banner {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s ease;
+  border-radius: 5px;
 
+  &:hover {
+    transform: scale(1.02);
+  }
+}
 .banner {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   height: 100vh;
+  background-position: center;
+  background-size: cover;
+  transition: opacity 500ms ease-in-out;
 
   .banner-content {
     width: 100%;
     height: 40%;
     z-index: 3;
+
+    @include responsive(s) {
+      height: 40%;
+    }
+  }
+}
+
+.banner-title {
+  @include responsive(s) {
+    font-size: 1.5rem;
+  }
+}
+
+.categories {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-description {
+  @include responsive(s) {
+    width: 100%;
+    max-height: 100px;
+    font-size: 0.9rem;
+  }
+}
+
+.card-categories {
+  height: 50px;
+}
+
+.container-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.iframe-trailer {
+  width: 100%;
+  max-width: 650px;
+  height: 475px;
+  border-radius: 4px;
+}
+
+.iframe-trailer-2 {
+  width: 100%;
+  max-width: 650px;
+  height: 400px;
+  border-radius: 4px;
+}
+
+.img-fluid {
+  border-radius: 4px;
+  max-width: 410px;
+  height: 380px;
+  object-fit: cover;
+}
+
+.btn-clear {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.img-card {
+  width: 100%;
+  height: 250px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.card-companie {
+  text-shadow: 0px 0px 10px #1357b3;
+  transition: 0.3s ease;
+  margin: 0;
+
+  span {
+    color: #fafcfc;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 }
 

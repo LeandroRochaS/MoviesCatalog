@@ -1,12 +1,31 @@
+import { useEffect, useState } from "react";
+import { API } from "../../utils/Api";
+
 interface CardCategoryProps {
-  name: string;
+  id: number;
 }
 
-export default function CardCategory({ name }: CardCategoryProps) {
+export default function CardCategory({ id }: CardCategoryProps) {
+  const [category, setCategory] = useState([]);
+
+  useEffect(() => {
+    console.log("Componente CardCategory montado.");
+
+    API.get(`/genre/movie/list?language=pt-BR`).then((response) => {
+      // setCategories(response.data.genres);
+      // response.data.find((item) => item.id == id );
+      console.log(
+        setCategory(
+          response.data.genres.find((item: { id: number }) => item.id == id)
+        )
+      );
+    });
+  }, [id]);
+
   return (
     <>
       <div className="container-category flex-aling">
-        <p className="category-title color-white p5 ">{name!}</p>
+        <p className="category-title color-white p5 ">{category.name}</p>
       </div>
     </>
   );

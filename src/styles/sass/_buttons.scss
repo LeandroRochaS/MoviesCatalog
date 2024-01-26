@@ -52,6 +52,7 @@ a {
 
 input {
   accent-color: $primary-color;
+  color: $white-light;
 }
 
 select,
@@ -69,8 +70,6 @@ textarea {
   border: 0;
   border: 4px;
   width: 100%;
-
-  color: $white-light;
 
   @include typeface-2(p3, desktop);
 }
