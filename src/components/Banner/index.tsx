@@ -1,9 +1,7 @@
 import starSvg from "../../images/svg/star.svg";
 import CardCategory from "../CardCategory";
-import playSvg from "../../images/svg/play.svg";
 import { MovieInfo } from "../../utils/types";
 import { baseURLImage } from "../../utils/Api";
-import Slider from "react-slick";
 import { Link } from "react-router-dom";
 
 type BannerProps = {

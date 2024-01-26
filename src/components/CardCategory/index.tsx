@@ -6,7 +6,10 @@ interface CardCategoryProps {
 }
 
 export default function CardCategory({ id }: CardCategoryProps) {
-  const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState({
+    id: 0,
+    name: "",
+  });
 
   useEffect(() => {
     console.log("Componente CardCategory montado.");
