@@ -36,7 +36,7 @@ export function ImagesCarousel({ id }: ImagesCarouselProps) {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {
