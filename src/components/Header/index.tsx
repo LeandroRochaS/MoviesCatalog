@@ -1,7 +1,6 @@
 import searchSvg from "../../images/svg/search.svg";
 import logoSvg from "../../images/svg/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export default function Header() {
   const navigate = useNavigate();
