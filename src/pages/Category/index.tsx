@@ -14,9 +14,22 @@ export default function Category() {
     centerPadding: "100px",
     swipeToSlide: true,
     infinite: true,
-    slidesToShow: 5, // Adjust slidesToShow as needed for category display
+    slidesToShow: 5,
     slidesToScroll: 1,
     className: "card-categories",
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 0,
+          infinite: true,
+          centerPadding: "100px",
+          swipeToSlide: true,
+        },
+      },
+    ],
   };
 
   useEffect(() => {

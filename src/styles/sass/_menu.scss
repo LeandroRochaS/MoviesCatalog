@@ -13,6 +13,20 @@ header {
 .header {
   max-width: 1440px;
   margin: 0 auto;
+
+  // @include responsive(s) {
+  //   flex-wrap: wrap;
+  // }
+}
+
+.header-left {
+  @include responsive(s) {
+    width: 50%;
+
+    ul {
+      flex-direction: column;
+    }
+  }
 }
 
 .menu {
@@ -61,6 +75,10 @@ header {
     background-color: transparent;
 
     outline: none;
+  }
+
+  @include responsive(s) {
+    min-width: 100px;
   }
 }
 
