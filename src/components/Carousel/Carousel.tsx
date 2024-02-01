@@ -26,6 +26,8 @@ export default function Carousel(props: CarouselProps) {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 1,
+    dots: false,
+
     responsive: [
       {
         breakpoint: 1200,
@@ -34,7 +36,7 @@ export default function Carousel(props: CarouselProps) {
           slidesToScroll: 2, // Ajustado para 2
           initialSlide: 0,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -44,7 +46,7 @@ export default function Carousel(props: CarouselProps) {
           slidesToScroll: 2, // Ajustado para 1
           initialSlide: 0,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -54,7 +56,7 @@ export default function Carousel(props: CarouselProps) {
           slidesToScroll: 1,
           initialSlide: 0,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
     ],

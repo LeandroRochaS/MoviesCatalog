@@ -28,7 +28,7 @@ export function ImagesCarousel({ id }: ImagesCarouselProps) {
           initialSlide: 1,
 
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -37,6 +37,7 @@ export function ImagesCarousel({ id }: ImagesCarouselProps) {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 1,
+          dots: false,
         },
       },
       {
@@ -45,6 +46,7 @@ export function ImagesCarousel({ id }: ImagesCarouselProps) {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+          dots: false,
         },
       },
     ],

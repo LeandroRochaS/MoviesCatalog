@@ -16,6 +16,8 @@ export default function Category() {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
+    dots: false,
+
     className: "card-categories",
     responsive: [
       {
@@ -27,6 +29,7 @@ export default function Category() {
           infinite: true,
           centerPadding: "100px",
           swipeToSlide: true,
+          dots: false,
         },
       },
     ],
